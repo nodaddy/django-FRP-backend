@@ -3,8 +3,7 @@ from django.contrib import admin
 from django.utils.translation import ugettext_lazy as _
 
 STATUS_CHOICES = [
-    ('OG', 'Ongoing'),
-    ('CL', 'Closed'),
+    ('OP', 'Open'),
     ('UL', 'Unlisted'),
     ('DC', 'Result Declared'),
 ]
