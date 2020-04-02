@@ -18,13 +18,13 @@ DEPT_CHOICES = [
 
 class User(AbstractBaseUser, PermissionsMixin):
     name = models.CharField(_('first name'), max_length=100)
-    dept = models.CharField(_("department"), max_length=2, choices=DEPT_CHOICES)
+    dept = models.CharField(_("department"), max_length=20)
     enrl_no = models.IntegerField(_("enrollment no"), null=True)
     year = models.IntegerField(_("year"), null=True)
     email = models.EmailField(_('email address'), unique=True)
-    phone = PhoneNumberField(_("phone number"))
+    phone = models.CharField(_("phone number"), max_length=12)
     skype = models.CharField(_('skype name'), max_length=100)
-    cv = models.CharField(_('first name'), max_length=100)
+    cv = models.CharField(_('cv'), max_length=100)
     date_joined = models.DateTimeField(_('date joined'), auto_now_add=True)
     is_active = models.BooleanField(_('active'), default=True)
     is_staff = models.BooleanField(_('staff'), default=False)

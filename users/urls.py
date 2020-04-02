@@ -7,4 +7,6 @@ urlpatterns = [
     url(r'^logout/', LogoutView.as_view()),
     url(r'^changepwd/', ChangePassword.as_view()),
     url(r'^register/', RegisterView.as_view()),
+    url(r'^getprofile/', GetProfileData.as_view()),
 ]
+

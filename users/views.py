@@ -6,6 +6,20 @@ from rest_framework.views import APIView
 from rest_framework import status
 from .serializers import *
 
+class GetProfileData(APIView):
+    def get(self, request):
+        content = {
+            'name': request.user.name,
+            'dept': request.user.dept,
+            'enrol_no': request.user.enrl_no,
+            'email': request.user.email,
+            'year': request.user.year,
+            'phone': request.user.phone,
+            'skype': request.user.skype,
+            'cv': request.user.cv,
+
+        }
+        return Response(content)
 
 class LoginView(APIView):
     permission_classes = ()

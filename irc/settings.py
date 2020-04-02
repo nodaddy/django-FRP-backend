@@ -27,7 +27,7 @@ AUTH_USER_MODEL = 'users.User'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['13.233.130.10','ec2-13-233-130-10.ap-south-1.compute.amazonaws.com']
+ALLOWED_HOSTS = ['13.233.130.10', 'ec2-13-233-130-10.ap-south-1.compute.amazonaws.com', '127.0.0.1']
 
 # Application definition
 
